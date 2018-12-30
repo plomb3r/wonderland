@@ -20,7 +20,7 @@ class SqlWorker:
         conn.close()
         return results
 
-    def insert_to_main(self, element):
+    def insert(self, element):
         conn, cursor = self.connect_db()
         cursor.execute(element)
         conn.commit()
